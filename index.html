@@ -775,8 +775,9 @@
         <div class="container">
 
           <div class="form reservation-form bg-black-10">
+            <input type="hidden" name="access_key" value="dc9b3f9c-45e5-44da-aaa6-c9ca84d291a4">
 
-            <form action="" class="form-left">
+            <form action="https://api.web3forms.com/submit" method="POST" class="form-left">
 
               <h2 class="headline-1 text-center">Online Appointment</h2>
 
@@ -845,6 +846,8 @@
 
               <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
 
+              <div class="h-captcha" data-captcha="true"></div>
+              
               <button type="submit" class="btn btn-secondary">
                 <span class="text text-1">Book Now</span>
 
@@ -852,7 +855,7 @@
               </button>
 
             </form>
-
+              <script src="https://web3forms.com/client/script.js" async defer></script>
             <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
 
               <h2 class="headline-1 text-center">Contact Us</h2>
