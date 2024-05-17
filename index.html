@@ -771,84 +771,97 @@
       <!-- 
         - #RESERVATION
       -->
-            <section class="reservation" id="book now">
-              <div class="container">
-                <div class="form reservation-form bg-black-10">
-                  <input type="hidden" name="access_key" value="dc9b3f9c-45e5-44da-aaa6-c9ca84d291a4">
+      <section class="reservation" id="book now">
+        <div class="container">
+          <div class="form reservation-form bg-black-10">
+            <form id="appointment-form" class="form-left">
+              <h2 class="headline-1 text-center">Online Appointment</h2>
+              <p class="form-text text-center">
+                Booking request <a href="tel:+6598711801" class="link">+65 9871-1801</a>
+                or fill out the order form
+              </p>
 
-                  <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-                  <input type="hidden" name="from_name" value="My Website" />
-                  <!-- 
-                    IMPORTANT: You need to contact the form handling service support to whitelist your domain.
-                    The error message indicates that form submissions from your current domain's TLD are blocked by default.
-                  -->
+              <div class="input-wrapper">
+                <input type="text" name="user_name" placeholder="Your Name" autocomplete="off" class="input-field" required>
+                <input type="tel" name="user_phone" placeholder="Phone Number" autocomplete="off" class="input-field" required>
+              </div>
 
-                  <form action="https://api.web3forms.com/submit" method="POST" class="form-left">
-                    <h2 class="headline-1 text-center">Online Appointment</h2>
-                    <p class="form-text text-center">
-                      Booking request <a href="tel:+6598711801" class="link">+65 9871-1801</a>
-                      or fill out the order form
-                    </p>
+              <div class="input-wrapper">
+                <div class="icon-wrapper">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                  <select name="user_person" class="input-field" required>
+                    <option value="1-person">1 Person</option>
+                    <option value="2-person">2 Person</option>
+                    <option value="3-person">3 Person</option>
+                    <option value="4-person">4 Person</option>
+                    <option value="5-person">5 Person</option>
+                    <option value="6-person">6 Person</option>
+                    <option value="7-person">7 Person</option>
+                  </select>
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
 
-                    <div class="input-wrapper">
-                      <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
-                      <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
-                    </div>
+                <div class="icon-wrapper">
+                  <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+                  <input type="date" name="user_date" class="input-field" required>
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
 
-                    <div class="input-wrapper">
-                      <div class="icon-wrapper">
-                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                        <select name="person" class="input-field">
-                          <option value="1-person">1 Person</option>
-                          <option value="2-person">2 Person</option>
-                          <option value="3-person">3 Person</option>
-                          <option value="4-person">4 Person</option>
-                          <option value="5-person">5 Person</option>
-                          <option value="6-person">6 Person</option>
-                          <option value="7-person">7 Person</option>
-                        </select>
-                        <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                      </div>
+                <div class="icon-wrapper">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <select name="user_time" class="input-field" required>
+                    <option value="08:00am">08 : 00 am</option>
+                    <option value="09:00am">09 : 00 am</option>
+                    <option value="10:00am">10 : 00 am</option>
+                    <option value="11:00am">11 : 00 am</option>
+                    <option value="12:00pm">12 : 00 pm</option>
+                    <option value="01:00pm">01 : 00 pm</option>
+                    <option value="02:00pm">02 : 00 pm</option>
+                    <option value="03:00pm">03 : 00 pm</option>
+                    <option value="04:00pm">04 : 00 pm</option>
+                    <option value="05:00pm">05 : 00 pm</option>
+                    <option value="06:00pm">06 : 00 pm</option>
+                    <option value="07:00pm">07 : 00 pm</option>
+                    <option value="08:00pm">08 : 00 pm</option>
+                    <option value="09:00pm">09 : 00 pm</option>
+                    <option value="10:00pm">10 : 00 pm</option>
+                  </select>
+                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                </div>
+              </div>
 
-                      <div class="icon-wrapper">
-                        <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
-                        <input type="date" name="reservation-date" class="input-field">
-                        <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                      </div>
+              <textarea name="user_message" placeholder="Message" autocomplete="off" class="input-field" required></textarea>
 
-                      <div class="icon-wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                        <select name="time" class="input-field">
-                          <option value="08:00am">08 : 00 am</option>
-                          <option value="09:00am">09 : 00 am</option>
-                          <option value="10:00am">10 : 00 am</option>
-                          <option value="11:00am">11 : 00 am</option>
-                          <option value="12:00pm">12 : 00 pm</option>
-                          <option value="01:00pm">01 : 00 pm</option>
-                          <option value="02:00pm">02 : 00 pm</option>
-                          <option value="03:00pm">03 : 00 pm</option>
-                          <option value="04:00pm">04 : 00 pm</option>
-                          <option value="05:00pm">05 : 00 pm</option>
-                          <option value="06:00pm">06 : 00 pm</option>
-                          <option value="07:00pm">07 : 00 pm</option>
-                          <option value="08:00pm">08 : 00 pm</option>
-                          <option value="09:00pm">09 : 00 pm</option>
-                          <option value="10:00pm">10 : 00 pm</option>
-                        </select>
-                        <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                      </div>
-                    </div>
+              <!-- Honeypot for spam prevention -->
+              <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
 
-                    <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+              <button type="submit" class="btn btn-secondary">
+                <span class="text text-1">Book Now</span>
+                <span class="text text-2" aria-hidden="true">Book Now</span>
+              </button>
+            </form>
 
-                    <div class="h-captcha" data-captcha="true"></div>
+                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-                    <button type="submit" class="btn btn-secondary">
-                      <span class="text text-1">Book Now</span>
-                      <span class="text text-2" aria-hidden="true">Book Now</span>
-                    </button>
-                  </form>
-                  <script src="https://web3forms.com/client/script.js" async defer></script>
+                        <script type="text/javascript">
+                          emailjs.init('8N5DZys5deGYk-5V9');
+
+                          document.getElementById('appointment-form').addEventListener('submit', function(event) {
+                            event.preventDefault();
+
+                            const serviceID = 'service_6rp0cqs'; // Replace with your EmailJS service ID
+                            const templateID = 'template_a73128r'; // Replace with your EmailJS template ID
+
+                            emailjs.sendForm(serviceID, templateID, this)
+                              .then(() => {
+                                alert('Your message has been sent successfully!');
+                                document.getElementById('appointment-form').reset();
+                              }, (error) => {
+                                alert('Failed to send the message. Please try again.');
+                                console.log('FAILED...', error);
+                              });
+                          });
+                        </script>
 
             <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
 
