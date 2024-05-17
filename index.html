@@ -782,8 +782,10 @@
               </p>
 
               <div class="input-wrapper">
-                <input type="text" name="user_name" placeholder="Your Name" autocomplete="off" class="input-field" required>
-                <input type="tel" name="user_phone" placeholder="Phone Number" autocomplete="off" class="input-field" required>
+                <input type="text" name="user_name" placeholder="Your Name" autocomplete="off" class="input-field"
+                  required>
+                <input type="tel" name="user_phone" placeholder="Phone Number" autocomplete="off" class="input-field"
+                  required>
               </div>
 
               <div class="input-wrapper">
@@ -830,7 +832,8 @@
                 </div>
               </div>
 
-              <textarea name="user_message" placeholder="Message" autocomplete="off" class="input-field" required></textarea>
+              <textarea name="user_message" placeholder="Message" autocomplete="off" class="input-field"
+                required></textarea>
 
               <!-- Honeypot for spam prevention -->
               <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
@@ -841,27 +844,28 @@
               </button>
             </form>
 
-                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-                        <script type="text/javascript">
-                          emailjs.init('8N5DZys5deGYk-5V9');
+            <script type="text/javascript">
+              emailjs.init('8N5DZys5deGYk-5V9');
 
-                          document.getElementById('appointment-form').addEventListener('submit', function(event) {
-                            event.preventDefault();
+              document.getElementById('appointment-form').addEventListener('submit', function (event) {
+                event.preventDefault();
 
-                            const serviceID = 'service_6rp0cqs'; // Replace with your EmailJS service ID
-                            const templateID = 'template_a73128r'; // Replace with your EmailJS template ID
+                const serviceID = 'service_6rp0cqs'; // Replace with your EmailJS service ID
+                const templateID = 'template_a73128r'; // Replace with your EmailJS template ID
 
-                            emailjs.sendForm(serviceID, templateID, this)
-                              .then(() => {
-                                alert('Your message has been sent successfully!');
-                                document.getElementById('appointment-form').reset();
-                              }, (error) => {
-                                alert('Failed to send the message. Please try again.');
-                                console.log('FAILED...', error);
-                              });
-                          });
-                        </script>
+                emailjs.sendForm(serviceID, templateID, this)
+                  .then(() => {
+                    alert('Your message has been sent successfully!');
+                    document.getElementById('appointment-form').reset();
+                  }, (error) => {
+                    alert('Failed to send the message. Please try again.');
+                    console.log('FAILED...', error);
+                  });
+              });
+            </script>
 
             <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
 
